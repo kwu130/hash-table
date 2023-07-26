@@ -6,7 +6,7 @@
 #ifndef HASH_TABLE_HASH_TABLE_H
 #define HASH_TABLE_HASH_TABLE_H
 
-#define HT_INITIAL_BASE_SIZE 3
+#define HT_INITIAL_BASE_SIZE 31
 // refer to https://github.com/jamesroutley/write-a-hash-table/tree/master
 
 typedef struct ht_item {
