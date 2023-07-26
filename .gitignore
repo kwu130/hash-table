@@ -1,0 +1,10 @@
+# projet build
+cmake-build-debug/
+
+# IDE
+.vscode/
+.idea/
+
+# macos
+.DS_Store
+
