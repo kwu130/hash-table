@@ -120,7 +120,7 @@ char* ht_search(ht_hash_table* ht, const char* key) {
 
 void ht_insert(ht_hash_table* ht, const char* key, const char* value) {
     const int load = ht->count * 100 / ht->size;
-    if (load > 70) {
+    if (load > HT_MAX_LOAD_FACTOR * 100) {
         ht_resize_up(ht);
     }
 
@@ -141,7 +141,7 @@ void ht_insert(ht_hash_table* ht, const char* key, const char* value) {
 
 void ht_delete(ht_hash_table* ht, const char* key) {
     const int load = ht->count * 100 / ht->size;
-    if (load < 10) {
+    if (load < HT_MIN_LOAD_FACTOR * 100) {
         ht_resize_down(ht);
     }
 

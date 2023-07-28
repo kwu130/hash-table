@@ -7,6 +7,9 @@
 #define HASH_TABLE_HASH_TABLE_H
 
 #define HT_INITIAL_BASE_SIZE 31
+#define HT_MAX_LOAD_FACTOR 0.75
+#define HT_MIN_LOAD_FACTOR 0.10
+
 // refer to https://github.com/jamesroutley/write-a-hash-table/tree/master
 
 typedef struct ht_item {
@@ -20,6 +23,7 @@ typedef struct {
     int base_size;
     int size;
     int count;
+    double factor;
     ht_item **items;
 } ht_hash_table;
 
