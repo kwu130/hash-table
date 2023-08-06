@@ -36,30 +36,20 @@ private:
 
 private:
     std::list<hash_node<K, V>> *table;
-    int ht_size{};
-    int ht_capacity{};
-    double max_factor{};
-    double min_factor{};
+    int ht_size;
+    int ht_capacity;
+    double max_factor;
+    double min_factor;
 };
 
 
 template<typename K, typename V>
-hash_table<K, V>::hash_table() {
-    this->ht_size = 0;
-    this->ht_capacity = HASH_TABLE_DEFAULT_SIZE;
-    this->max_factor = HASH_TABLE_MAX_LOAD_FACTOR;
-    this->min_factor = HASH_TABLE_MIN_LOAD_FACTOR;
-    this->table = new std::list<hash_node<K, V>>[this->ht_capacity];
+hash_table<K, V>::hash_table() : hash_table(HASH_TABLE_DEFAULT_SIZE, HASH_TABLE_MAX_LOAD_FACTOR) {
 }
 
 
 template<typename K, typename V>
-hash_table<K, V>::hash_table(const int capacity) {
-    this->ht_size = 0;
-    this->ht_capacity = capacity;
-    this->max_factor = HASH_TABLE_MAX_LOAD_FACTOR;
-    this->min_factor = HASH_TABLE_MIN_LOAD_FACTOR;
-    this->table = new std::list<hash_node<K, V>>[this->ht_capacity];
+hash_table<K, V>::hash_table(const int capacity) : hash_table(capacity, HASH_TABLE_MAX_LOAD_FACTOR) {
 }
 
 
