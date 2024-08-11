@@ -1,5 +1,6 @@
 # projet build
 cmake-build-debug/
+build
 
 # IDE
 .vscode/
@@ -7,4 +8,3 @@ cmake-build-debug/
 
 # macos
 .DS_Store
-
