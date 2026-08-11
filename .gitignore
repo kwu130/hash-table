@@ -1,6 +1,6 @@
-# projet build
-cmake-build-debug/
-build
+# project builds
+/build*/
+/cmake-build-*/
 
 # IDE
 .vscode/
